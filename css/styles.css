@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Gaegu:wght@300;400;700&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", serif;
+}
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --green: #b1ff93;
+    --yellow: #ffff90;
+    --skyblue: #c2ecff;
+    --orange: #ffb16f;
+}
+
+[data-theme="dark"] {
+    --black: #ffffff;
+    --white: #000000;
+    --green: #f1c40f;
+    --yellow: #61006e;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: hidden;
+}
+
+body {
+    /* background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/1.gif'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.nickname {
+    font-size: clamp(0.8rem, 5vw, 1.2rem);    
+    padding: 1rem;
+    color: var(--white);
+    letter-spacing: 0.15rem;
+}
+
+section {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    top: 0;
+}
+
+.buttons, .timer, .more-buttons {
+    display: flex;
+
+}
+
+.buttons, .more-buttons {
+    font-size: 0;
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: var(--white);
+    padding: clamp(1rem, 1vw, 1.1rem);
+    border-radius: 10px;
+    font-size: clamp(0.5rem, 2.35vw, 1.1rem);
+    cursor: pointer;
+}
+
+/* .pomodoroBtn, .shortbreakBtn, .longbreakBtn, .startBtn, .restartBtn {
+} */
+
+.shortbreakBtn {
+    margin: 0 1rem;
+}
+
+.startBtn, .restartBtn {
+    margin: 0 1rem;
+}
+
+.startBtn {
+    background-color: var(--green);
+}
+
+.restartBtn {
+    background-color: var(--yellow);
+}
+
+.shortbreakBtn {
+    background-color: var(--skyblue);
+}
+
+.longbreakBtn {
+    background-color: var(--orange);
+}
+
+.timer {
+    margin: 3rem 0;
+    font-size: clamp(2rem, 12vw, 4.5rem);
+    color: var(--white);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+@media (max-width: 420px) {
+    .buttons {
+        margin: 0 2rem;
+    }
+
+    .shortbreakBtn {
+        margin: 0 9px;
+    }
+
+    .timer {
+        font-size: clamp(1rem, 11vw, 4.2rem);
+    }
+
+    button {
+        font-size: clamp(5px, 12vw, 9.5px);
+    }
+}
+
+/*why i'm adjusting it for this resolution*/
+
+@media (max-width: 300px) {
+    .buttons {
+        margin: 0 2rem;
+    }
+
+    .shortbreakBtn {
+        margin: 0 9px;
+    }
+
+    .timer {
+        font-size: 30px;
+    }
+
+    button {
+        font-size: 7.5px;
+    }
+}
