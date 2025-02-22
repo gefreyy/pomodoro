@@ -158,13 +158,15 @@ longbreakBtn.addEventListener('click', (e) =>{
 // Background
 const bg = document.getElementById('bg-page');
 
-if(now.getHours(hora) < 6) {
-    bg.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('img/1.gif')";
-} else if (now.getHours(hora) < 16){
-    bg.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('img/2.gif')";
-} else if (now.getHours(hora) < 18){
-    bg.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.2)), url('img/3.gif')";
-} else if (now.getHours(hora) < 3){
+if (now.getHours(hora) <= 24) {
     bg.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('img/4.gif')";
-} 
+} else if(now.getHours(hora) <= 18) {
+    bg.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('img/3.gif')";
+} else if (now.getHours(hora) <= 16){
+    bg.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('img/2.gif')";
+} else if (now.getHours(hora) <= 6){
+    bg.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.2)), url('img/1.gif')";
+} else if (now.getHours(hora) <= 3){
+    bg.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('img/4.gif')";
+}
 
