@@ -16,12 +16,12 @@
     --orange: #ffb16f;
 }
 
-[data-theme="dark"] {
+/* [data-theme="dark"] {
     --black: #ffffff;
-    --white: #000000;
+    --white: #000000; Unnused
     --green: #f1c40f;
     --yellow: #61006e;
-}
+} */
 
 html, body {
     width: 100%;
@@ -36,21 +36,8 @@ body {
     background-size: cover;
 }
 
-header {
-    position: relative;
-    width: 100%;
-    z-index: 1;
-}
-
-.nickname {
-    font-size: clamp(0.8rem, 5vw, 1.2rem);    
-    padding: 1rem;
-    color: var(--white);
-    letter-spacing: 0.15rem;
-}
-
 section {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,6 +100,20 @@ button {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     border-radius: 15px;
     padding: 1rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.nickname {
+    font-size: clamp(0.2rem, 2vw, .9rem);    
+    padding: 1rem;
+    color: var(--white);
+    letter-spacing: 0.15rem;
+    filter: opacity(0.15);
 }
 
 @media (max-width: 420px) {

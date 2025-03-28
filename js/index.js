@@ -166,6 +166,6 @@ if (now.getHours(hora) <= 3){
     bg.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('img/2.gif')";
 } else if(now.getHours(hora) <= 18) {
     bg.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('img/3.gif')";
-} else if (now.getHours(hora) < 24) {
+} else if (now.getHours(hora) <= 24) {
     bg.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('img/4.gif')";
 }
